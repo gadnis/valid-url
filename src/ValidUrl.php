@@ -80,7 +80,7 @@ class ValidUrl
         return $this->ip;
     }
 
-    public function getValid()
+    public function isValid()
     {
         return $this->valid;
     }
