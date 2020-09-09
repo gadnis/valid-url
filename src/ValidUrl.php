@@ -19,8 +19,9 @@ class ValidUrl extends ValidUrlCore
             'ip' => $this->getIp(),
             'valid' => $this->isValid(),
             'url_filtered' => $this->getFilteredUrl(),
+            'url_filtered_uniq' => $this->getFilteredUniqUrl(),
             'url_string' => $this->urlString,
-            // 'is_same' => $this->isSame('some-url'),
+            // 'is_equal' => $this->isEqual('some-url'),
         ];
     }
 }

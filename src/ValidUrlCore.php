@@ -147,4 +147,16 @@ class ValidUrlCore
 
         return $simpleComparison === 0;
     }
+
+    /**
+     * Get url without www. prefix
+     *
+     * @return string
+     */
+    public function getFilteredUniqUrl()
+    {
+        $url = $this->getFilteredUrl();
+
+        return str_replace($this->getDomain(), $this->getUniqDomain(), $url);
+    }
 }
