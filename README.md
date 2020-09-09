@@ -35,6 +35,8 @@ var_dump(
     // $object->getDomain()
     // $object->getUniqDomain()
     // $object->getPath()
+    // $object->getQuery()
+    // $object->getFragment()
     // $object->getIp()
     // $object->isValid()
 );
