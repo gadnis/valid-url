@@ -22,12 +22,13 @@ composer require edbox/valid-url
 ```php
 $url = 'https://www.example.com/index.php?request=product_cat&product_info=22726';
 
-$object = new Edbox\Tools\ValidUrl($url),
-
+$object = new Edbox\Tools\ValidUrl($url);
+// or
+// $object = (new Edbox\Tools\ValidUrl)->setUrlString($url);
 var_dump(
 
     /**
-     * Available methods
+     * Available get methods
      */
     $object->toArray()
     // $object->getPrefix()
@@ -35,7 +36,7 @@ var_dump(
     // $object->getUniqDomain()
     // $object->getPath()
     // $object->getIp()
-    // $object->getValid()
+    // $object->isValid()
 );
 ```
 

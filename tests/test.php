@@ -5,6 +5,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $url = 'https://www.example.com/index.php?request=product_cat&product_info=22726';
 
 $object = new Edbox\Tools\ValidUrl($url);
+// or
+// $object = (new Edbox\Tools\ValidUrl)->setUrlString($url);
 
 var_dump(
 
@@ -17,5 +19,5 @@ var_dump(
     // $object->getUniqDomain()
     // $object->getPath()
     // $object->getIp()
-    // $object->getValid()
+    // $object->isValid()
 );

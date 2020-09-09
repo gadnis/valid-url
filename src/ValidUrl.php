@@ -16,10 +16,29 @@ class ValidUrl
     /** @var string */
     private $urlString;
 
-    public function __construct($urlString)
+    public function __construct($urlString = null)
     {
+        // skip if no url string
+        // this way we allow to set url string later using setUrlString() method
+        if (!$urlString) {
+            return;
+        }
+
         $this->urlString = $urlString;
         $this->init();
+    }
+
+    /**
+     * [setUrlString description]
+     * @param string $urlString [description]
+     */
+    public function setUrlString(string $urlString)
+    {
+        $this->urlString = $urlString;
+
+        $this->init();
+
+        return $this;
     }
 
     private function init()
@@ -93,7 +112,7 @@ class ValidUrl
             'domain_uniq' => $this->getUniqDomain(),
             'path' => $this->getPath(),
             'ip' => $this->getIp(),
-            'valid' => $this->getValid(),
+            'valid' => $this->isValid(),
             'url_string' => $this->urlString,
         ];
     }
