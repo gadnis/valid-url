@@ -1,6 +1,6 @@
 # Url string parser
 
-This package depends on 'parse_url', 'gethostbyname' php functions. It provides a simple way to cast all what is needed about url string:
+This package depends on `parse_url`, `gethostbyname` php functions. It provides a simple way to cast all what is needed about url string:
 * Domain
 * Ip
 * Prefix
